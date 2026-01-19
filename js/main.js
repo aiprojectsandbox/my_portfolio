@@ -70,12 +70,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.getElementsByClassName("close")[0];
     const galleryItems = document.querySelectorAll('.work-card');
 
+    const closeModal = () => {
+        modal.style.display = "none";
+        document.body.classList.remove('no-scroll');
+    };
+
     galleryItems.forEach(item => {
         item.addEventListener('click', (e) => {
             e.preventDefault(); // Prevent default link behavior
             const img = item.querySelector('img');
             if (img) {
                 modal.style.display = "flex"; // Changed from block to flex
+                document.body.classList.add('no-scroll'); // Lock scroll
                 modalImg.src = img.src;
 
                 // Get title from card info
@@ -87,16 +93,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (closeBtn) {
-        closeBtn.onclick = function () {
-            modal.style.display = "none";
-        }
+        closeBtn.onclick = closeModal;
     }
 
     // Close when clicking outside the image (Better Mobile Support)
     modal.addEventListener('click', function (event) {
-        // If the clicked element is the modal container itself (not the image or caption)
-        if (event.target === modal) {
-            modal.style.display = "none";
+        // Close if the click is NOT on the image itself
+        // (Allows closing when clicking background, caption, or gap)
+        if (!event.target.closest('.modal-content')) {
+            closeModal();
         }
     });
 });
