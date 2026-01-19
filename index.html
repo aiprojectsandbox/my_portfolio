@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <meta name="description" content="Portfolio of creative works: Illustrations and Games.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#" class="brand-logo">PORTFOLIO</a>
+
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="main-nav">
+                <a href="#works">Works</a>
+                <a href="#about">About</a>
+                <!-- <a href="mailto:example@example.com" class="contact-btn">Contact</a> -->
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-container">
+                <h1 class="hero-title">
+                    <span class="fade-in d-1">CREATING</span>
+                    <span class="fade-in d-2">WORLDS</span>
+                </h1>
+                <p class="hero-subtitle fade-in d-3">Illustration & Game Development</p>
+            </div>
+            <div class="scroll-indicator fade-in d-4">
+                <span>Scroll</span>
+                <div class="line"></div>
+            </div>
+        </section>
+
+        <section id="works" class="works-section">
+            <div class="container">
+                <div class="section-top">
+                    <h2 class="section-title">Selected Works</h2>
+                    <div class="filter-wrap">
+                        <button class="filter-item active" data-filter="all">All</button>
+                        <button class="filter-item" data-filter="illustration">Illustration</button>
+                        <button class="filter-item" data-filter="game">Game</button>
+                    </div>
+                </div>
+
+                <div class="works-grid">
+                    <!-- Item 1: Illustration -->
+                    <a href="#" class="work-card" data-category="illustration">
+                        <div class="card-media">
+                            <img src="assets/images/illust_1.jpg" alt="Original Illustration" loading="lazy">
+                        </div>
+                        <div class="card-info">
+                            <h3>Illustration 01</h3>
+                            <p>Concept Art</p>
+                        </div>
+                    </a>
+
+                    <!-- Item 2: Illustration -->
+                    <a href="#" class="work-card" data-category="illustration">
+                        <div class="card-media">
+                            <img src="assets/images/illust_2.jpg" alt="Character Design" loading="lazy">
+                        </div>
+                        <div class="card-info">
+                            <h3>Illustration 02</h3>
+                            <p>Concept Art</p>
+                        </div>
+                    </a>
+
+                    <!-- Item 3: Illustration -->
+                    <a href="#" class="work-card" data-category="illustration">
+                        <div class="card-media">
+                            <img src="assets/images/illust_3.jpg" alt="Illustration 03" loading="lazy">
+                        </div>
+                        <div class="card-info">
+                            <h3>Illustration 03</h3>
+                            <p>Concept Art</p>
+                        </div>
+                    </a>
+
+                    <!-- Item 4: Illustration -->
+                    <a href="#" class="work-card" data-category="illustration">
+                        <div class="card-media">
+                            <img src="assets/images/illust_4.jpg" alt="Illustration 04" loading="lazy">
+                        </div>
+                        <div class="card-info">
+                            <h3>Illustration 04</h3>
+                            <p>Concept Art</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container about-wrapper">
+                <div class="about-content">
+                    <h2 class="section-title">About</h2>
+                    <p class="about-text">
+                        趣味でイラスト制作とゲーム開発を行っています。<br>
+                        日常の中で生まれたアイデアを形にし、<br>
+                        成果物としてこのサイトに掲載しています。<br>
+                        <br>
+                        ジャンルに捉われず、新しい表現を模索し続けています。
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="image-modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
