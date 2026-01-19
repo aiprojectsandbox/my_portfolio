@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault(); // Prevent default link behavior
             const img = item.querySelector('img');
             if (img) {
-                modal.style.display = "block";
+                modal.style.display = "flex"; // Changed from block to flex
                 modalImg.src = img.src;
 
                 // Get title from card info
@@ -92,10 +92,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Close when clicking outside the image
-    window.onclick = function (event) {
-        if (event.target == modal) {
+    // Close when clicking outside the image (Better Mobile Support)
+    modal.addEventListener('click', function (event) {
+        // If the clicked element is the modal container itself (not the image or caption)
+        if (event.target === modal) {
             modal.style.display = "none";
         }
-    }
+    });
 });
