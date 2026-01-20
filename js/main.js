@@ -49,6 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     galleryItems.forEach(item => {
         item.addEventListener('click', (e) => {
+            // Do not open lightbox for Games (let the link works)
+            if (item.getAttribute('data-category') === 'game') {
+                return;
+            }
+
             e.preventDefault(); // Prevent default link behavior
             const img = item.querySelector('img');
             if (img) {
