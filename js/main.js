@@ -74,11 +74,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Close when clicking outside the image (Better Mobile Support)
-    modal.addEventListener('click', function (event) {
-        // Close if the click is NOT on the image itself
-        // (Allows closing when clicking background, caption, or gap)
-        if (!event.target.closest('.modal-content')) {
-            closeModal();
-        }
-    });
+    if (modal) {
+        modal.addEventListener('click', function (event) {
+            // Close if the click is NOT on the image itself
+            // (Allows closing when clicking background, caption, or gap)
+            if (!event.target.closest('.modal-content')) {
+                closeModal();
+            }
+        });
+    }
 });
