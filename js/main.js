@@ -1,34 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Filter Works
-    const filterBtns = document.querySelectorAll('.filter-item');
-    const workItems = document.querySelectorAll('.work-card');
-
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            // Active State
-            filterBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            const filterValue = btn.getAttribute('data-filter');
-
-            workItems.forEach(item => {
-                if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                    item.style.display = 'block';
-                    setTimeout(() => {
-                        item.style.opacity = '1';
-                        item.style.transform = 'translateY(0)';
-                    }, 50);
-                } else {
-                    item.style.opacity = '0';
-                    item.style.transform = 'translateY(20px)';
-                    setTimeout(() => {
-                        item.style.display = 'none';
-                    }, 300);
-                }
-            });
-        });
-    });
+    // Filter Works code removed (Split sections implemented)
 
     // Smooth Scroll for Anchors
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

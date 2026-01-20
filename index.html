@@ -28,7 +28,8 @@
             </button>
 
             <nav class="main-nav">
-                <a href="#works">Works</a>
+                <a href="#illustrations">Illustrations</a>
+                <a href="#games">Games</a>
                 <a href="#about">About</a>
                 <!-- <a href="mailto:example@example.com" class="contact-btn">Contact</a> -->
             </nav>
@@ -51,21 +52,16 @@
         </section>
 
         <section id="works" class="works-section">
-            <div class="container">
+            <div class="container" id="illustrations" style="scroll-margin-top: 100px;">
                 <div class="section-top">
-                    <h2 class="section-title">Selected Works</h2>
-                    <div class="filter-wrap">
-                        <button class="filter-item active" data-filter="all">All</button>
-                        <button class="filter-item" data-filter="illustration">Illustration</button>
-                        <button class="filter-item" data-filter="game">Game</button>
-                    </div>
+                    <h2 class="section-title">Illustrations</h2>
                 </div>
 
                 <div class="works-grid">
                     <!-- Item 1: Illustration -->
                     <a href="#" class="work-card" data-category="illustration">
                         <div class="card-media">
-                            <img src="assets/images/illust_1.jpg" alt="Original Illustration" loading="lazy">
+                            <img src="assets/images/illust/illust_1.jpg" alt="Original Illustration" loading="lazy">
                         </div>
                         <div class="card-info">
                             <h3>Peter</h3>
@@ -76,7 +72,7 @@
                     <!-- Item 2: Illustration -->
                     <a href="#" class="work-card" data-category="illustration">
                         <div class="card-media">
-                            <img src="assets/images/illust_2.jpg" alt="Character Design" loading="lazy">
+                            <img src="assets/images/illust/illust_2.jpg" alt="Character Design" loading="lazy">
                         </div>
                         <div class="card-info">
                             <h3>Festival</h3>
@@ -87,7 +83,7 @@
                     <!-- Item 3: Illustration -->
                     <a href="#" class="work-card" data-category="illustration">
                         <div class="card-media">
-                            <img src="assets/images/illust_3.jpg" alt="Illustration 03" loading="lazy">
+                            <img src="assets/images/illust/illust_3.jpg" alt="Illustration 03" loading="lazy">
                         </div>
                         <div class="card-info">
                             <h3>Clown</h3>
@@ -98,11 +94,30 @@
                     <!-- Item 4: Illustration -->
                     <a href="#" class="work-card" data-category="illustration">
                         <div class="card-media">
-                            <img src="assets/images/illust_4.jpg" alt="Illustration 04" loading="lazy">
+                            <img src="assets/images/illust/illust_4.jpg" alt="Illustration 04" loading="lazy">
                         </div>
                         <div class="card-info">
                             <h3>Trophy</h3>
                             <p>Concept Art</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="container" id="games" style="margin-top: 80px; scroll-margin-top: 100px;">
+                <div class="section-top">
+                    <h2 class="section-title">Games</h2>
+                </div>
+
+                <div class="works-grid">
+                    <!-- Item 5: Game -->
+                    <a href="games/my_games_001/index.html" class="work-card" data-category="game">
+                        <div class="card-media">
+                            <img src="assets/images/games/my_games_001.jpg" alt="くノ一の修行" loading="lazy">
+                        </div>
+                        <div class="card-info">
+                            <h3>くノ一の修行</h3>
+                            <p>Action Game</p>
                         </div>
                     </a>
                 </div>
